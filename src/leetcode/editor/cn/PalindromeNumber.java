@@ -8,6 +8,7 @@
 package leetcode.editor.cn;
 
 public class PalindromeNumber {
+
     //leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
         public boolean isPalindrome(int x) {
