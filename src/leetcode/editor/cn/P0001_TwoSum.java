@@ -2,7 +2,7 @@ package leetcode.editor.cn;
 
 import java.util.Arrays;
 
-public class TwoSum {
+public class P0001_TwoSum {
     //leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
         public int[] twoSum(int[] nums, int target) {
@@ -21,7 +21,7 @@ public class TwoSum {
 
 
     public static void main(String[] args) {
-        Solution solution = new TwoSum().new Solution();
+        Solution solution = new P0001_TwoSum().new Solution();
         int[] ans = solution.twoSum(new int[]{1,2,3,4,5}, 5);
         System.out.println(Arrays.toString(ans));
     }

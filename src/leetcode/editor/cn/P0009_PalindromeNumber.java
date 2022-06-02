@@ -7,7 +7,7 @@
 
 package leetcode.editor.cn;
 
-public class PalindromeNumber {
+public class P0009_PalindromeNumber {
 
     //leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
@@ -20,7 +20,7 @@ public class PalindromeNumber {
 
 
     public static void main(String[] args) {
-        Solution s = new PalindromeNumber().new Solution();
+        Solution s = new P0009_PalindromeNumber().new Solution();
         System.out.println(s.isPalindrome(123));
     }
 }
