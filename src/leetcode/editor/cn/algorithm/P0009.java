@@ -4,7 +4,7 @@ package leetcode.editor.cn.algorithm;
  * Author: @Deean
  * Date: 2022-06-21 23:58
  * LastEditTime: 2022-06-21 23:58
- * Description:
+ * Description: 回文数
  */
 
 public class P0009 {
