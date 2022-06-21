@@ -4,7 +4,7 @@ package leetcode.editor.cn.algorithm;
  * Author: @Deean
  * Date: 2022-06-22 00:16
  * LastEditTime: 2022-06-22 00:16
- * Description:
+ * Description: 移除元素
  */
 
 public class P0027 {
