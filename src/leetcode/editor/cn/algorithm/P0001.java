@@ -1,9 +1,15 @@
-package leetcode.editor.cn;
+/**
+ * Author: Deean
+ * Date: 2022-06-21 23:37
+ * LastEditTime: 2022-06-21 23:37
+ * Description: 1. 两数之和
+ */
+
+package leetcode.editor.cn.algorithm;
 
 import java.util.Arrays;
 
-public class P0001_TwoSum {
-    //leetcode submit region begin(Prohibit modification and deletion)
+public class P0001 {
     class Solution {
         public int[] twoSum(int[] nums, int target) {
             int n = nums.length;
@@ -17,12 +23,11 @@ public class P0001_TwoSum {
             return new int[0];
         }
     }
-//leetcode submit region end(Prohibit modification and deletion)
 
 
     public static void main(String[] args) {
-        Solution solution = new P0001_TwoSum().new Solution();
-        int[] ans = solution.twoSum(new int[]{1,2,3,4,5}, 5);
+        Solution solution = new P0001().new Solution();
+        int[] ans = solution.twoSum(new int[]{1, 2, 3, 4, 5}, 5);
         System.out.println(Arrays.toString(ans));
     }
 }
