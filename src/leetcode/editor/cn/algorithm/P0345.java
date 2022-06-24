@@ -22,9 +22,7 @@ public class P0345 {
             StringBuilder vowel = new StringBuilder();
             for (int i = 0; i < s.length(); i++) {
                 char c = s.charAt(i);
-                if (list.contains(c)) {
-                    vowel.append(c);
-                }
+                if (list.contains(c)) vowel.append(c);
             }
             String vowel2 = vowel.reverse().toString();
             StringBuilder str = new StringBuilder();
