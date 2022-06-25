@@ -15,8 +15,7 @@ public class P0832 {
             int[][] newImage = new int[n][n];
             for (int i = 0; i < n; i++) {
                 for (int j = 0; j < n; j++) {
-                    newImage[i][j] = image[i][n - 1 - j];
-                    newImage[i][j] = 1 - newImage[i][j];
+                    newImage[i][j] = 1 - image[i][n - 1 - j];
                 }
             }
             return newImage;
