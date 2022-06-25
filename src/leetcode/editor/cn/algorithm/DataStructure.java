@@ -1,5 +1,6 @@
 package leetcode.editor.cn.algorithm;
 
+
 /**
  * Author: @Deean
  * Date: 2022-06-22 23:09
@@ -25,6 +26,28 @@ class ListNode {
         this.next = next;
     }
 }
+
+
+//Definition for a binary tree node.*
+class TreeNode {
+    int val;
+    TreeNode left;
+    TreeNode right;
+
+    TreeNode() {
+    }
+
+    TreeNode(int val) {
+        this.val = val;
+    }
+
+    TreeNode(int val, TreeNode left, TreeNode right) {
+        this.val = val;
+        this.left = left;
+        this.right = right;
+    }
+}
+
 
 public class DataStructure {
 
