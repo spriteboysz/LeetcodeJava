@@ -56,6 +56,8 @@ public class ListNode {
     }
 
     public static void main(String[] args) {
+        ListNode node = new ListNode(0, null);
+        System.out.println(node);
         ListNode head = new ListNode(new int[]{1, 2, 3});
         System.out.println(head);
     }
