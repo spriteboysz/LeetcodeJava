@@ -27,7 +27,18 @@ public class TreeNode {
         this.right = right;
     }
 
-    public static void main(String[] args) {
 
+    @Override
+    public String toString() {
+        return "TreeNode{" +
+                "val=" + val +
+                ", left=" + left +
+                ", right=" + right +
+                '}';
+    }
+
+    public static void main(String[] args) {
+        //TreeNode tree = new TreeNode(ArrayList(new int[]{1, 2, 3, null, 4}));
+        //System.out.println(tree);
     }
 }
