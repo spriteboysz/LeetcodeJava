@@ -45,11 +45,11 @@ public class P0225 {
     }
 
     public static void main(String[] args) {
-        MyStack s = new P0225().new MyStack();
-        s.push(1);
-        s.push(2);
-        System.out.println(s.top());
-        System.out.println(s.pop());
-        System.out.println(s.empty());
+        MyStack myStack = new P0225().new MyStack();
+        myStack.push(1);
+        myStack.push(2);
+        System.out.println(myStack.top());
+        System.out.println(myStack.pop());
+        System.out.println(myStack.empty());
     }
 }
