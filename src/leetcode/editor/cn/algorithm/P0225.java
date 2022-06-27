@@ -46,7 +46,10 @@ public class P0225 {
 
     public static void main(String[] args) {
         MyStack s = new P0225().new MyStack();
-        Object ans = s.pop();
-        System.out.println(ans);
+        s.push(1);
+        s.push(2);
+        System.out.println(s.top());
+        System.out.println(s.pop());
+        System.out.println(s.empty());
     }
 }
