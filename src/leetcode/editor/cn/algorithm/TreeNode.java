@@ -42,6 +42,7 @@ public class TreeNode {
         while (!queue.isEmpty()) {
             TreeNode node = queue.poll();
             if (!"null".equals(dataList[i])) {
+                System.out.println(i + dataList[i]);
                 node.left = new TreeNode(Integer.parseInt(dataList[i]));
                 queue.offer(node.left);
             }
@@ -79,7 +80,7 @@ public class TreeNode {
     }
 
     public static void main(String[] args) {
-        TreeNode root = new TreeNode("1,2,3");
+        TreeNode root = new TreeNode("[1,2,3,4]");
         System.out.println(root);
     }
 }
