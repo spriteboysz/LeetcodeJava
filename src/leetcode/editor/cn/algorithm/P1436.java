@@ -1,5 +1,6 @@
 package leetcode.editor.cn.algorithm;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -30,9 +31,15 @@ public class P1436 {
 
     public static void main(String[] args) {
         Solution s = new P1436().new Solution();
-        //List<List<String>> paths = new ArrayList<>();
-        //paths.add(new ArrayList<List>("London", "New York"));
-        //Object ans = s.destCity(paths);
-        //System.out.println(ans);
+        String[][] cities = new String[][]{{"London", "New York"}, {"New York", "Lima"}, {"Lima", "Sao Paulo"}};
+        List<List<String>> paths = new ArrayList<>();
+        for (String[] city : cities) {
+            List<String> path = new ArrayList<>();
+            path.add(city[0]);
+            path.add(city[1]);
+            paths.add(path);
+        }
+        Object ans = s.destCity(paths);
+        System.out.println(ans);
     }
 }
