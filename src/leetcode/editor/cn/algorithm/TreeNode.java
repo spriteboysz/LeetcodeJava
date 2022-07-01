@@ -13,9 +13,9 @@ import java.util.Queue;
 
 //Definition for a binary tree node.*
 public class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
+    public int val;
+    public TreeNode left;
+    public TreeNode right;
 
     TreeNode() {
     }
@@ -30,7 +30,7 @@ public class TreeNode {
         this.right = right;
     }
 
-    TreeNode(String data) {
+    public TreeNode(String data) {
         if (data.equals("")) {
             this.val = 0;
         }
