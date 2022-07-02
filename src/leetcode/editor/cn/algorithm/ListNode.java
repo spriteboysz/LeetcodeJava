@@ -12,8 +12,8 @@ import java.util.ArrayList;
 //Definition for singly-linked list.
 public class ListNode {
     // code beginning
-    int val;
-    ListNode next;
+    public int val;
+    public ListNode next;
 
     public ListNode() {
     }
@@ -27,7 +27,7 @@ public class ListNode {
         this.next = next;
     }
 
-    ListNode(int[] values) {
+    public ListNode(int[] values) {
         int n = values.length;
         if (n == 0) new ListNode();
         if (n > 0) {
