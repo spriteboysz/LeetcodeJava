@@ -18,10 +18,15 @@ public class TreeNode {
     public TreeNode right;
 
     TreeNode() {
+        this.val = 0;
+        this.left = null;
+        this.right = null;
     }
 
     TreeNode(int val) {
         this.val = val;
+        this.left = null;
+        this.right = null;
     }
 
     TreeNode(int val, TreeNode left, TreeNode right) {
@@ -31,8 +36,8 @@ public class TreeNode {
     }
 
     public TreeNode(String data) {
-        if (data.equals("")) {
-            this.val = 0;
+        if (data == null || "".equals(data)) {
+            return;
         }
         String[] dataList = data.substring(1, data.length() - 1).split(",");
         TreeNode root = new TreeNode(Integer.parseInt(dataList[0]));
@@ -41,13 +46,12 @@ public class TreeNode {
         int i = 1;
         while (!queue.isEmpty()) {
             TreeNode node = queue.poll();
-            if (!"null".equals(dataList[i])) {
-                System.out.println(i + dataList[i]);
+            if (i < 6 && !"null".equals(dataList[i])) {
                 node.left = new TreeNode(Integer.parseInt(dataList[i]));
                 queue.offer(node.left);
             }
             i++;
-            if (!"null".equals(dataList[i])) {
+            if (i < 6 && !"null".equals(dataList[i])) {
                 node.right = new TreeNode(Integer.parseInt(dataList[i]));
                 queue.offer(node.right);
             }
@@ -67,7 +71,7 @@ public class TreeNode {
         while (!queue.isEmpty()) {
             TreeNode node = queue.poll();
             if (node != null) {
-                sb.append("").append(node.val);
+                sb.append(node.val);
                 queue.offer(node.left);
                 queue.offer(node.right);
             } else {
@@ -80,7 +84,7 @@ public class TreeNode {
     }
 
     public static void main(String[] args) {
-        TreeNode root = new TreeNode("[1,2,3,4]");
+        TreeNode root = new TreeNode("[1,null,3,4,5,6]");
         System.out.println(root);
     }
 }
