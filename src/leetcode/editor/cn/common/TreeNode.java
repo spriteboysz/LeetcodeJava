@@ -1,4 +1,4 @@
-package leetcode.editor.cn.algorithm;
+package leetcode.editor.cn.common;
 
 
 import java.util.LinkedList;
@@ -20,7 +20,7 @@ public class TreeNode {
     TreeNode() {
     }
 
-    TreeNode(int val) {
+    public TreeNode(int val) {
         this.val = val;
         this.left = null;
         this.right = null;

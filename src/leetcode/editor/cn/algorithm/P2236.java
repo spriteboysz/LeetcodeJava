@@ -1,5 +1,7 @@
 package leetcode.editor.cn.algorithm;
 
+import leetcode.editor.cn.common.TreeNode;
+
 /**
  * Author: Deean
  * Date: 2022-06-29 22:27

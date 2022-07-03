@@ -1,6 +1,6 @@
 package leetcode.editor.cn.LCP;
 
-import leetcode.editor.cn.algorithm.TreeNode;
+import leetcode.editor.cn.common.TreeNode;
 
 import java.util.HashSet;
 

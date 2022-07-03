@@ -1,6 +1,6 @@
 package leetcode.editor.cn.sword;
 
-import leetcode.editor.cn.algorithm.ListNode;
+import leetcode.editor.cn.common.ListNode;
 
 /**
  * Author: Deean

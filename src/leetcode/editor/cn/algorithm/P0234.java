@@ -1,5 +1,7 @@
 package leetcode.editor.cn.algorithm;
 
+import leetcode.editor.cn.common.ListNode;
+
 import java.util.ArrayList;
 
 /**

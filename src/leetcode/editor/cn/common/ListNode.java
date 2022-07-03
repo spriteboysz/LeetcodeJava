@@ -1,4 +1,4 @@
-package leetcode.editor.cn.algorithm;
+package leetcode.editor.cn.common;
 
 import java.util.ArrayList;
 

@@ -1,6 +1,6 @@
 package leetcode.editor.cn.interview;
 
-import leetcode.editor.cn.algorithm.ListNode;
+import leetcode.editor.cn.common.ListNode;
 
 /**
  * Author: Deean

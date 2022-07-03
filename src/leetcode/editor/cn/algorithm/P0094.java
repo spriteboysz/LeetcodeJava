@@ -1,5 +1,7 @@
 package leetcode.editor.cn.algorithm;
 
+import leetcode.editor.cn.common.TreeNode;
+
 import java.util.ArrayList;
 import java.util.List;
 
