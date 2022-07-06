@@ -77,7 +77,11 @@ public class TreeNode {
             sb.append(",");
         }
         sb.append("]");
-        return sb.toString();
+        String str = sb.toString();
+        while (str.contains("null,]")) {
+            str = str.replace("null,]", "]");
+        }
+        return str.replace(",]", "]");
     }
 
     public static void main(String[] args) {
