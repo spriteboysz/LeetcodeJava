@@ -42,6 +42,8 @@ public class O0057II {
     public static void main(String[] args) {
         Solution s = new O0057II().new Solution();
         int[][] ans = s.findContinuousSequence(15);
-        System.out.println(Arrays.toString(ans));
+        for (int[] an : ans) {
+            System.out.println(Arrays.toString(an));
+        }
     }
 }
