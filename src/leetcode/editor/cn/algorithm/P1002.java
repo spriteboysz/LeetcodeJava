@@ -1,6 +1,7 @@
 package leetcode.editor.cn.algorithm;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -14,7 +15,26 @@ public class P1002 {
     // code beginning
     class Solution {
         public List<String> commonChars(String[] words) {
-            return new ArrayList<>();
+            int[] common = new int[26];
+            Arrays.fill(common, Integer.MAX_VALUE);
+            for (String word : words) {
+                int[] cur = new int[26];
+                for (char c : word.toCharArray()) {
+                    cur[c - 'a']++;
+                }
+
+                for (int i = 0; i < 26; i++) {
+                    common[i] = Math.min(common[i], cur[i]);
+                }
+            }
+            List<String> commonChar = new ArrayList<>();
+            for (int i = 0; i < 26; i++) {
+                while (common[i] > 0) {
+                    commonChar.add(String.valueOf((char) (i + 'a')));
+                    common[i]--;
+                }
+            }
+            return commonChar;
         }
     }
 
