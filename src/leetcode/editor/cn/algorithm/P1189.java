@@ -11,7 +11,20 @@ public class P1189 {
     // code beginning
     class Solution {
         public int maxNumberOfBalloons(String text) {
-
+            int[] count = new int[26];
+            for (char c : text.toCharArray()) {
+                count[c - 'a']++;
+            }
+            int countb = count['b' - 'a'];
+            int counta = count[0];
+            int countl = count['l' - 'a'] / 2;
+            int counto = count['o' - 'a'] / 2;
+            int countn = count['n' - 'a'];
+            int min = Integer.MAX_VALUE;
+            for (int c : new int[]{countb, counta, countl, counto, countn}) {
+                min = Math.min(min, c);
+            }
+            return min;
         }
     }
 
