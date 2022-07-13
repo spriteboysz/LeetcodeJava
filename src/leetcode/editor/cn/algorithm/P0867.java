@@ -27,8 +27,6 @@ public class P0867 {
     public static void main(String[] args) {
         Solution s = new P0867().new Solution();
         int[][] ans = s.transpose(new int[][]{{1, 2, 3}, {4, 5, 6}});
-        for (int[] row : ans) {
-            System.out.println(Arrays.toString(row));
-        }
+        for (int[] row : ans) System.out.println(Arrays.toString(row));
     }
 }
