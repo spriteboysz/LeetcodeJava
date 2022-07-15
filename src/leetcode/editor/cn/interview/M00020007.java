@@ -35,7 +35,8 @@ public class M00020007 {
 
     public static void main(String[] args) {
         Solution s = new M00020007().new Solution();
-        Object ans = s.getIntersectionNode(new ListNode(new int[]{5, 0, 1, 8, 4, 5}), new ListNode(new int[]{4, 1, 8, 4, 5}));
+        Object ans = s.getIntersectionNode(new ListNode(new int[]{4, 1, 8, 4, 5}), new ListNode(new int[]{5, 0, 1, 8, 4,
+                5}));
         System.out.println(ans);
     }
 }
