@@ -29,8 +29,8 @@ public class P0429 {
                     TreeNode node = queue.poll();
                     assert node != null;
                     level.add(node.val);
-                    for (TreeNode n : node.children) {
-                        if (n != null) queue.offer(n);
+                    for (TreeNode child : node.children) {
+                        if (child != null) queue.offer(child);
                     }
                 }
                 levels.add(level);
