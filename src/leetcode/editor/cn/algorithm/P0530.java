@@ -12,7 +12,7 @@ import leetcode.editor.cn.common.TreeNode;
 public class P0530 {
     // code beginning
     class Solution {
-        int pre = -100, min = Integer.MAX_VALUE;
+        int pre = Integer.MAX_VALUE, min = Integer.MAX_VALUE;
 
         public int getMinimumDifference(TreeNode root) {
             dfs(root);
@@ -23,7 +23,7 @@ public class P0530 {
             if (node == null) return;
             dfs(node.left);
             int cur = node.val;
-            min = Math.min(min, cur - pre);
+            min = Math.min(min, Math.abs(cur - pre));
             pre = cur;
             dfs(node.right);
         }
@@ -31,7 +31,9 @@ public class P0530 {
 
     public static void main(String[] args) {
         Solution s = new P0530().new Solution();
-        Object ans = s.getMinimumDifference(new TreeNode("[1,0,48,null,null,12,49]"));
+        //Object ans = s.getMinimumDifference(new TreeNode("[1,0,48,null,null,12,49]"));
+        //System.out.println(ans);
+        Object ans = s.getMinimumDifference(new TreeNode("[1564,1434,3048,1,null,null,3184]"));
         System.out.println(ans);
     }
 }
