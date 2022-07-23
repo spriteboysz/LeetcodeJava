@@ -7,7 +7,7 @@ package leetcode.editor.cn.algorithm;
  * Description: 258. 各位相加
  */
 
-public class P258 {
+public class P0258 {
     // code beginning
     class Solution {
         public int addDigits(int num) {
@@ -24,7 +24,7 @@ public class P258 {
     }
 
     public static void main(String[] args) {
-        Solution s = new P258().new Solution();
+        Solution s = new P0258().new Solution();
         Object ans = s.addDigits(38);
         System.out.println(ans);
         ans = s.addDigits(0);
