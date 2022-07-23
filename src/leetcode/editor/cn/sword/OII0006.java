@@ -16,7 +16,7 @@ public class OII0006 {
             for (int i = 0; i < numbers.length; i++) {
                 int index = Arrays.binarySearch(Arrays.copyOfRange(numbers, i + 1, numbers.length), target - numbers[i]);
                 if (index >= 0) {
-                    return new int[]{i, index};
+                    return new int[]{i, index + i + 1};
                 }
             }
             return new int[0];
@@ -25,9 +25,9 @@ public class OII0006 {
 
     public static void main(String[] args) {
         Solution s = new OII0006().new Solution();
-        int[] ans = s.twoSum(new int[]{2, 3, 4}, 6);
+        int[] ans = s.twoSum(new int[]{1, 2, 4, 6, 10}, 8);
         System.out.println(Arrays.toString(ans));
-        ans = s.twoSum(new int[]{2, 3, 5}, 6);
+        ans = s.twoSum(new int[]{2, 3, 4}, 6);
         System.out.println(Arrays.toString(ans));
     }
 }
