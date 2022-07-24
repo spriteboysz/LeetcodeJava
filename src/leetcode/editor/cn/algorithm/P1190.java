@@ -15,9 +15,9 @@ public class P1190 {
             for (char c : s.toCharArray()) {
                 if (c == ')') {
                     StringBuilder cur = new StringBuilder();
-                    int index = str.lastIndexOf("(");
-                    cur.append(str.substring(index + 1, str.length())).reverse();
-                    str.delete(index, str.length()).append(cur);
+                    int index = str.lastIndexOf("("), len = str.length();
+                    cur.append(str.substring(index + 1, len)).reverse();
+                    str.delete(index, len).append(cur);
                 } else {
                     str.append(c);
                 }
