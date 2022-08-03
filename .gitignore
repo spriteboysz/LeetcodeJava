@@ -40,8 +40,10 @@ auto-import.
 .idea/modules.xml
 .idea/*.iml
 .idea/modules
+.idea/vsc.xml
 *.iml
 *.ipr
+.gitignore
 
 # CMake
 cmake-build-*/
@@ -217,3 +219,8 @@ dmypy.json
 # Cython debug symbols
 cython_debug/
 
+/.idea/codeStyles/codeStyleConfig.xml
+/.idea/encodings.xml
+/.idea/inspectionProfiles/Project_Default.xml
+!/.gitignore
+!/README.md
