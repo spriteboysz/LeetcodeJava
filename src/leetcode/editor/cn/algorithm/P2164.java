@@ -19,7 +19,7 @@ public class P2164 {
             List<Integer> even = new ArrayList<>(), odd = new ArrayList<>();
             for (int i = 0; i < nums.length; ) {
                 even.add(nums[i++]);
-                odd.add(nums[i++]);
+                if (i < nums.length) odd.add(nums[i++]);
             }
             even.sort(Integer::compareTo);
             odd.sort(Comparator.reverseOrder());
@@ -28,7 +28,7 @@ public class P2164 {
             int index = 0;
             for (int i = 0; i < nums.length; ) {
                 sortArray[i++] = even.get(index);
-                sortArray[i++] = odd.get(index++);
+                if (i < nums.length) sortArray[i++] = odd.get(index++);
             }
             return sortArray;
         }
