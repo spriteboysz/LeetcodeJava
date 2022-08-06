@@ -13,6 +13,7 @@
 .idea/usage.statistics.xml
 .idea/dictionaries
 .idea/shelf
+.idea/
 
 # Generated files
 .idea/**/contentModel.xml
@@ -43,7 +44,6 @@ auto-import.
 .idea/vsc.xml
 *.iml
 *.ipr
-.gitignore
 
 # CMake
 cmake-build-*/
@@ -219,8 +219,6 @@ dmypy.json
 # Cython debug symbols
 cython_debug/
 
-/.idea/codeStyles/codeStyleConfig.xml
-/.idea/encodings.xml
-/.idea/inspectionProfiles/Project_Default.xml
-!/.gitignore
+# ignore
+.gitignore
 !/README.md
