@@ -11,25 +11,27 @@ import java.util.Arrays;
 public class M00080010 {
     // code beginning
     class Solution {
-        int oldColor, n, m;
+        int[][] image;
+        int n, m, oldColor, newColor;
 
         public int[][] floodFill(int[][] image, int sr, int sc, int newColor) {
+            this.image = image;
             this.oldColor = image[sr][sc];
+            this.newColor = newColor;
             this.n = image.length;
             this.m = image[0].length;
-            dfs(image, sr, sc, newColor);
+            if (newColor == image[sr][sc]) return image;
+            dfs(sr, sc);
             return image;
         }
 
-        private void dfs(int[][] image, int sr, int sc, int newColor) {
+        private void dfs(int sr, int sc) {
             if (sr < 0 || sc < 0 || sr >= n || sc >= m || image[sr][sc] != oldColor) return;
-            int[][] directions = new int[][]{{0, 1}, {0, -1}, {1, 0}, {-1, 0}};
-            for (int[] direction : directions) {
-                image[sr][sc] = newColor;
-                sr += direction[0];
-                sc += direction[1];
-                dfs(image, sr, sc, newColor);
-            }
+            image[sr][sc] = newColor;
+            dfs(sr - 1, sc);
+            dfs(sr + 1, sc);
+            dfs(sr, sc - 1);
+            dfs(sr, sc + 1);
         }
     }
 
