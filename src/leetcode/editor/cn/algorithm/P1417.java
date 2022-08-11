@@ -11,17 +11,13 @@ public class P1417 {
     // code beginning
     class Solution {
         public String reformat(String s) {
-            int count1 = 0, count2 = 0;
+            int count1 = 0, count2 = 0, index1 = 0, index2 = 1;
             for (char c : s.toCharArray()) {
-                if (Character.isDigit(c)) {
-                    count1++;
-                } else {
-                    count2++;
-                }
+                if (Character.isDigit(c)) count1++;
+                else count2++;
             }
             if (Math.abs(count1 - count2) >= 2) return "";
             char[] arr = new char[s.length()];
-            int index1 = 0, index2 = 1;
             if (count1 <= count2) {
                 index1 = 1;
                 index2 = 0;
