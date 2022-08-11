@@ -16,7 +16,9 @@ public class P0997 {
     // code beginning
     class Solution {
         public int findJudge(int n, int[][] trust) {
-            if (trust.length == 0) return n;
+            if (trust.length == 0) {
+                return n == 1 ? 1 : -1;
+            }
             Map<Integer, Set<Integer>> map = new HashMap<>();
             Set<Integer> trusting = new HashSet<>();
             for (int[] t : trust) {
