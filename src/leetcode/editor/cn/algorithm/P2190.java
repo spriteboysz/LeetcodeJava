@@ -10,7 +10,7 @@ import java.util.Map;
  * Description: 2190. 数组中紧跟 key 之后出现最频繁的数字
  */
 
-public class P2910 {
+public class P2190 {
     // code beginning
     class Solution {
         public int mostFrequent(int[] nums, int key) {
@@ -32,7 +32,7 @@ public class P2910 {
     }
 
     public static void main(String[] args) {
-        Solution s = new P2910().new Solution();
+        Solution s = new P2190().new Solution();
         Object ans = s.mostFrequent(new int[]{2, 2, 2, 2, 3}, 2);
         System.out.println(ans);
     }
