@@ -24,5 +24,7 @@ public class M00050001 {
         Solution s = new M00050001().new Solution();
         Object ans = s.insertBits(0, 31, 0, 4);
         System.out.println(ans);
+        ans = s.insertBits(1, 31, 0, 4);
+        System.out.println(ans);
     }
 }
