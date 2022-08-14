@@ -17,6 +17,7 @@ public class TreeNode {
     public int val;
     public TreeNode left;
     public TreeNode right;
+    public TreeNode next;
     public List<TreeNode> children;
 
     public TreeNode() {
@@ -37,6 +38,13 @@ public class TreeNode {
     public TreeNode(int val, List<TreeNode> children) {
         this.val = val;
         this.children = children;
+    }
+
+    public TreeNode(int val, TreeNode left, TreeNode right, TreeNode next) {
+        this.val = val;
+        this.left = left;
+        this.right = right;
+        this.next = next;
     }
 
     public TreeNode(String data) {
