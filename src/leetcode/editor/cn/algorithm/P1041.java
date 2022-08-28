@@ -14,15 +14,9 @@ public class P1041 {
             int x = 0, y = 0, direction = 0; // 方向: 0上   1右   2下   3左
             for (char c : instructions.toCharArray()) {
                 if (c == 'L') {
-                    if (direction == 0)
-                        direction = 3;
-                    else
-                        direction--;
+                    direction = (direction + 4 - 1) % 4;
                 } else if (c == 'R') {
-                    if (direction == 3)
-                        direction = 0;
-                    else
-                        direction++;
+                    direction = (direction + 1) % 4;
                 } else if (c == 'G') {
                     switch (direction) {
                         case 0 -> y++;
