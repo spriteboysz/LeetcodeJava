@@ -16,7 +16,6 @@ public class P0384 {
     // code beginning
     class Solution {
         int[] nums;
-
         public Solution(int[] nums) {
             this.nums = nums;
         }
