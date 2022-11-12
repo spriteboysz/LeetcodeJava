@@ -27,7 +27,7 @@ public class P0001 {
 
     public static void main(String[] args) {
         Solution solution = new P0001().new Solution();
-        int[] ans = solution.twoSum(new int[]{1, 2, 3, 4, 5}, 5);
+        int[] ans = solution.twoSum(new int[]{1, 2, 3, 4, 5}, 4);
         System.out.println(Arrays.toString(ans));
     }
 }
