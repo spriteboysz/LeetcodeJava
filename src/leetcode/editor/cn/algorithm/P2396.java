@@ -17,7 +17,7 @@ public class P2396 {
 
     public static void main(String[] args) {
         Solution s = new P2396().new Solution();
-        Object ans = s.isStrictlyPalindromic(9);
+        Object ans = s.isStrictlyPalindromic(8);
         System.out.println(ans);
     }
 }
