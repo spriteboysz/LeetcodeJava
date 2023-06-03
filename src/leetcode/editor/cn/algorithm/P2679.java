@@ -19,8 +19,8 @@ public class P2679 {
             int sum = 0;
             for (int j = 0; j < nums[0].length; j++) {
                 int maximum = 0;
-                for (int i = 0; i < nums.length; i++) {
-                    maximum = Math.max(maximum, nums[i][j]);
+                for (int[] num : nums) {
+                    maximum = Math.max(maximum, num[j]);
                 }
                 sum += maximum;
             }
