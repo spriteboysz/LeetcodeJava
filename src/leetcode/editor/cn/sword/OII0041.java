@@ -15,7 +15,7 @@ public class OII0041 {
     class MovingAverage {
         private final int size;
         private final Queue<Integer> queue;
-        private double sum = 0;
+        private double sum;
 
         public MovingAverage(int size) {
             this.size = size;

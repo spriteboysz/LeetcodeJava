@@ -17,7 +17,7 @@ public class OII0018 {
                     builder.append(Character.toLowerCase(c));
                 }
             }
-            return builder.toString().equals(builder.reverse().toString());
+            return builder.toString().contentEquals(builder.reverse());
         }
     }
 

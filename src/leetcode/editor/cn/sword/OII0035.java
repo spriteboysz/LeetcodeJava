@@ -41,8 +41,6 @@ public class OII0035 {
 
     public static void main(String[] args) {
         Solution s = new OII0035().new Solution();
-        //Object ans = s.findMinDifference(new ArrayList<>(List.of(new String[]{"00:00", "23:59", "00:00"})));
-        //System.out.println(ans);
         Object ans = s.findMinDifference(new ArrayList<>(List.of(new String[]{"00:00", "23:59"})));
         System.out.println(ans);
     }

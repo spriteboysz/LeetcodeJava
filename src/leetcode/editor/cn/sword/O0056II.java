@@ -18,9 +18,6 @@ public class O0056II {
             for (int num : nums) {
                 count.put(num, count.getOrDefault(num, 0) + 1);
             }
-            //for (int num : nums) {
-            //    if (count.get(num) == 1) return num;
-            //}
             for (Map.Entry<Integer, Integer> entry : count.entrySet()) {
                 if (entry.getValue() == 1) return entry.getKey();
             }

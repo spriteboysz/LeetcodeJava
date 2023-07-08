@@ -12,7 +12,7 @@ public class O0067 {
     class Solution {
         public int strToInt(String str) {
             char[] cs = str.trim().toCharArray();
-            if (cs.length <= 0) return 0;
+            if (cs.length == 0) return 0;
             boolean flag = (cs[0] == '-');
             long ans = 0;
             for (int i = cs[0] == '-' || cs[0] == '+' ? 1 : 0; i < cs.length; i++) {
