@@ -28,6 +28,7 @@ public class O0032III {
                 int size = queue.size();
                 for (int i = 0; i < size; i++) {
                     TreeNode node = queue.poll();
+                    assert node != null;
                     if (index % 2 == 0) {
                         level.add(node.val);
                     } else {

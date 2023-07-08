@@ -26,6 +26,7 @@ public class OII0044 {
                 int max = Integer.MIN_VALUE, size = queue.size();
                 for (int i = 0; i < size; i++) {
                     TreeNode node = queue.poll();
+                    assert node != null;
                     max = Math.max(max, node.val);
                     if (node.left != null) queue.offer(node.left);
                     if (node.right != null) queue.offer(node.right);

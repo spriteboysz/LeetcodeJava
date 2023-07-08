@@ -17,7 +17,10 @@ public class OII0021 {
             for (int i = 0; i < n; i++) {
                 fast = fast.next;
             }
-            if (fast == null) return head.next;
+            if (fast == null) {
+                assert head != null;
+                return head.next;
+            }
             while (fast.next != null) {
                 fast = fast.next;
                 slow = slow.next;
