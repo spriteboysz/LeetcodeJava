@@ -41,7 +41,6 @@ public class P0429 {
 
     public static void main(String[] args) {
         Solution s = new P0429().new Solution();
-        //Object ans = s.levelOrder(new TreeNode("[1,null,3,2,4,null,5,6]"));
-        //System.out.println(ans);
+        System.out.println(s.levelOrder(new TreeNode("[1,2,3]")));
     }
 }

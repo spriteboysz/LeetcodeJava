@@ -14,7 +14,7 @@ public class P1961 {
             StringBuilder builder = new StringBuilder();
             for (String word : words) {
                 builder.append(word);
-                if (builder.length() == s.length()) return s.equals(builder.toString());
+                if (builder.length() == s.length()) return s.contentEquals(builder);
                 if (builder.length() > s.length()) break;
             }
             return false;

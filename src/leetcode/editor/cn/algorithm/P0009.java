@@ -11,8 +11,8 @@ public class P0009 {
     // code beginning
     class Solution {
         public boolean isPalindrome(int x) {
-            String reversedStr = (new StringBuilder(x + "")).reverse().toString();
-            return (x + "").equals(reversedStr);
+            String reversedStr = (new StringBuilder(String.valueOf(x))).reverse().toString();
+            return (String.valueOf(x)).equals(reversedStr);
         }
     }
 

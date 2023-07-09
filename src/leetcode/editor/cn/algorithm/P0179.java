@@ -14,7 +14,7 @@ public class P0179 {
     class Solution {
         public String largestNumber(int[] nums) {
             String[] ss = new String[nums.length];
-            for (int i = 0; i < nums.length; i++) ss[i] = "" + nums[i];
+            for (int i = 0; i < nums.length; i++) ss[i] = String.valueOf(nums[i]);
             Arrays.sort(ss, (a, b) -> {
                 String sa = a + b, sb = b + a;
                 return sb.compareTo(sa);

@@ -31,8 +31,6 @@ public class P0530 {
 
     public static void main(String[] args) {
         Solution s = new P0530().new Solution();
-        //Object ans = s.getMinimumDifference(new TreeNode("[1,0,48,null,null,12,49]"));
-        //System.out.println(ans);
         Object ans = s.getMinimumDifference(new TreeNode("[1564,1434,3048,1,null,null,3184]"));
         System.out.println(ans);
     }

@@ -16,11 +16,6 @@ public class P1974 {
                 int num = c - 'a' + 1;
                 int diff = Math.abs(num - cur);
                 count += Math.min(26 - diff, diff) + 1;
-                //if (Math.abs(num - cur) >= 26 - Math.abs(num - cur)) {
-                //    count += 26 - Math.abs(num - cur) + 1;
-                //} else {
-                //    count += Math.abs(num - cur) + 1;
-                //}
                 cur = num;
             }
             return count;

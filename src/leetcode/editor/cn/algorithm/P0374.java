@@ -11,6 +11,9 @@ public class P0374 {
     // code beginning
     class GuessGame {
         public int guess(int num) {
+            if (num > 0) {
+                return -1;
+            }
             return 0;
         }
     }

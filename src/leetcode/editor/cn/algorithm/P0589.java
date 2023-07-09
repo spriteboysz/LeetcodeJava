@@ -33,5 +33,6 @@ public class P0589 {
 
     public static void main(String[] args) {
         Solution s = new P0589().new Solution();
+        System.out.println(s.preorder(new TreeNode("[1,2,3]")));
     }
 }

@@ -29,5 +29,6 @@ public class P0559 {
 
     public static void main(String[] args) {
         Solution s = new P0559().new Solution();
+        System.out.println(s.maxDepth(new TreeNode("[1,2,3]")));
     }
 }

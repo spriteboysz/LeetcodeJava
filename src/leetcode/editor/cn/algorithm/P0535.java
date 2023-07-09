@@ -13,14 +13,14 @@ import java.util.Map;
 public class P0535 {
     // code beginning
     public class Codec {
-        private Map<Integer, String> database = new HashMap<>();
+        private final Map<Integer, String> database = new HashMap<>();
         private int tiny;
 
         // Encodes a URL to a shortened URL.
         public String encode(String longUrl) {
             tiny++;
             database.put(tiny, longUrl);
-            return "http://tinyurl.com/" + tiny;
+            return "https://tinyurl.com/" + tiny;
         }
 
         // Decodes a shortened URL to its original URL.

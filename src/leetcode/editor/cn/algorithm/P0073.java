@@ -33,9 +33,6 @@ public class P0073 {
                     matrix[i][c] = 0;
                 }
             }
-            //for (int[] rows : matrix) {
-            //    System.out.println(Arrays.toString(rows));
-            //}
         }
     }
 

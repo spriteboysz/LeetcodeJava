@@ -23,7 +23,7 @@ public class P1790 {
                     }
                 }
             }
-            return (builder1.length() == 2) && (builder1.toString().equals(builder2.toString()));
+            return (builder1.length() == 2) && (builder1.toString().contentEquals(builder2));
         }
     }
 

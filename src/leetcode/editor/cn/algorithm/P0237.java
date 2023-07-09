@@ -20,7 +20,6 @@ public class P0237 {
 
     public static void main(String[] args) {
         Solution s = new P0237().new Solution();
-        //Object ans = s.deleteNode(null);
-        //System.out.println(ans);
+        s.deleteNode(new ListNode(5));
     }
 }

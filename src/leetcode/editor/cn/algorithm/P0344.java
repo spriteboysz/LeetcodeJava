@@ -17,9 +17,6 @@ public class P0344 {
                 s[left] = s[right];
                 s[right] = tmp;
             }
-            //for (char c : s) {
-            //    System.out.println(c);
-            //}
         }
     }
 

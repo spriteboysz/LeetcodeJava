@@ -26,7 +26,7 @@ public class P0844 {
                     tBuilder.append(c);
                 }
             }
-            return sBuilder.toString().equals(tBuilder.toString());
+            return sBuilder.toString().contentEquals(tBuilder);
         }
     }
 

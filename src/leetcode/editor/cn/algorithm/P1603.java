@@ -20,27 +20,30 @@ public class P1603 {
 
         public boolean addCar(int carType) {
             switch (carType) {
-                case 1:
+                case 1 -> {
                     if (this.big >= 1) {
                         this.big--;
                         return true;
                     } else {
                         return false;
                     }
-                case 2:
+                }
+                case 2 -> {
                     if (this.medium >= 1) {
                         this.medium--;
                         return true;
                     } else {
                         return false;
                     }
-                case 3:
+                }
+                case 3 -> {
                     if (this.small >= 1) {
                         this.small--;
                         return true;
                     } else {
                         return false;
                     }
+                }
             }
             return false;
         }

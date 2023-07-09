@@ -19,7 +19,6 @@ public class P2068 {
                 if (Math.abs(count1[i] - count2[i]) > 3) {
                     return false;
                 }
-                ;
             }
             return true;
         }

@@ -27,7 +27,7 @@ public class M00080007 {
                 return;
             }
             for (int i = 0; i < s.length(); i++) {
-                if (path.contains(s.charAt(i) + "")) continue;
+                if (path.contains(String.valueOf(s.charAt(i)))) continue;
                 path += s.charAt(i);
                 backtrace(s, path);
                 path = path.substring(0, path.length() - 1);

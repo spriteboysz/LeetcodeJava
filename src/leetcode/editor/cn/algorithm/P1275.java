@@ -20,7 +20,7 @@ public class P1275 {
                     board[moves[i][0]][moves[i][1]] += 5;
                 }
             }
-            int sum = 0;
+            int sum;
             for (int i = 0; i < 3; i++) {
                 sum = board[i][0] + board[i][1] + board[i][2];
                 if (sum == 3) {

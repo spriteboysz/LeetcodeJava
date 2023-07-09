@@ -19,15 +19,15 @@ public class P1773 {
             for (List<String> item : items) {
                 String type = item.get(0), color = item.get(1), name = item.get(2);
                 switch (ruleKey) {
-                    case "type":
+                    case "type" -> {
                         if (type.equals(ruleValue)) count++;
-                        break;
-                    case "color":
+                    }
+                    case "color" -> {
                         if (color.equals(ruleValue)) count++;
-                        break;
-                    case "name":
+                    }
+                    case "name" -> {
                         if (name.equals(ruleValue)) count++;
-                        break;
+                    }
                 }
             }
             return count;

@@ -15,9 +15,6 @@ public class M00080006 {
     class Solution {
         public void hanota(List<Integer> a, List<Integer> b, List<Integer> c) {
             process(a.size(), a, b, c);
-            // System.out.println(a);
-            // System.out.println(b);
-            // System.out.println(c);
         }
 
         private void process(int size, List<Integer> start, List<Integer> other, List<Integer> end) {

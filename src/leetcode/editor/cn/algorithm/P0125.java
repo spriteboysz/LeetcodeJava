@@ -20,7 +20,7 @@ public class P0125 {
             }
 
             StringBuilder s_rev = new StringBuilder(sb).reverse();
-            return sb.toString().equals(s_rev.toString());
+            return sb.toString().contentEquals(s_rev);
         }
     }
 

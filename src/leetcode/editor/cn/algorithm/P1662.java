@@ -19,7 +19,7 @@ public class P1662 {
             for (String word : word2) {
                 sb2.append(word);
             }
-            return sb1.toString().equals(sb2.toString());
+            return sb1.toString().contentEquals(sb2);
         }
     }
 

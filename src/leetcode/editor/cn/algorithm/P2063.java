@@ -13,7 +13,7 @@ public class P2063 {
         public long countVowels(String word) {
             long count = 0L;
             for (int i = 0; i < word.length(); i++) {
-                if ("aeiou".contains("" + word.charAt(i))) {
+                if ("aeiou".contains(String.valueOf(word.charAt(i)))) {
                     count += (long) (i + 1) * (word.length() - i);
                 }
             }
