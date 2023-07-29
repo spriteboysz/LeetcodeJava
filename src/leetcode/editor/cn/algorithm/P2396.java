@@ -1,5 +1,7 @@
 package leetcode.editor.cn.algorithm;
 
+import static java.lang.System.out;
+
 /**
  * Author: Deean
  * Date: 2023-02-26 22:33
@@ -18,6 +20,6 @@ public class P2396 {
     public static void main(String[] args) {
         Solution s = new P2396().new Solution();
         Object ans = s.isStrictlyPalindromic(8);
-        System.out.println(ans);
+        out.println(ans);
     }
 }
