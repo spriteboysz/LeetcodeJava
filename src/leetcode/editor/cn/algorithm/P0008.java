@@ -39,7 +39,7 @@ public class P0008 {
 
     public static void main(String[] args) {
         Solution s = new P0008().new Solution();
-        Object ans = s.myAtoi("   -42");
+        int ans = s.myAtoi("   -42");
         System.out.println(ans);
         ans = s.myAtoi("4193 with words");
         System.out.println(ans);

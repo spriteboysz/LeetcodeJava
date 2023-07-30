@@ -24,7 +24,7 @@ public class P0007 {
 
     public static void main(String[] args) {
         Solution s = new P0007().new Solution();
-        Object ans = s.reverse(-123);
+        int ans = s.reverse(-123);
         System.out.println(ans);
         ans = s.reverse(1534236469);
         System.out.println(ans);
