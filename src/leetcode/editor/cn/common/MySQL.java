@@ -10,11 +10,12 @@ import java.sql.*;
  */
 
 public class MySQL {
-    // code beginning
+    // MySQL数据库连接参数
     private static final String URL = "jdbc:mysql://localhost:3306/";
     private static final String USER = "root";
     private static final String PASSWORD = "www.huawei.com";
 
+    // 反映射注册数据库驱动
     static {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -23,6 +24,7 @@ public class MySQL {
         }
     }
 
+    // 建立连接
     public static Connection getConnection(String db) {
         String url = URL + db;
         Connection connection = null;
