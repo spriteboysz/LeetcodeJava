@@ -1,6 +1,8 @@
 package leetcode.editor.cn.common;
 
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 import static leetcode.editor.cn.common.MySQL.close;
 import static leetcode.editor.cn.common.MySQL.getConnection;
@@ -25,7 +27,6 @@ public class EmployeeDAO {
             connection = getConnection("P0570");
             String sql = "insert into employee(id, name, department, managerId) values(?,?,?,?)";
             preparedStatement = connection.prepareStatement(sql);
-            preparedStatement.executeUpdate(sql);
             preparedStatement.setInt(1, employee.getId());
             preparedStatement.setString(2, employee.getName());
             preparedStatement.setString(3, employee.getDepartment());
@@ -33,10 +34,28 @@ public class EmployeeDAO {
             flag = preparedStatement.executeUpdate();
         } catch (SQLException e) {
             System.out.println("插入操作异常");
+            e.printStackTrace();
         } finally {
             close(preparedStatement, connection);
         }
         return flag > 0 ? "Insert Success" : "Insert Fail";
+    }
+
+    public static String delete(int id) {
+        int flag = 0;
+        try {
+            connection = getConnection("P0570");
+            String sql = "delete from employee where id = ?";
+            preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setInt(1, id);
+            flag = preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            System.out.println("删除操作异常");
+            e.printStackTrace();
+        } finally {
+            close(preparedStatement, connection);
+        }
+        return flag > 0 ? "Delete Success" : "Delete Fail";
     }
 
     public static Employee query(int id) {
@@ -48,22 +67,69 @@ public class EmployeeDAO {
             preparedStatement.setInt(1, id);
             ResultSet resultSet = preparedStatement.executeQuery();
             if (resultSet.next()) {
-                int qid = resultSet.getInt("id");
+                int iid = resultSet.getInt("id");
                 String name = resultSet.getString("name");
                 String department = resultSet.getString("department");
-                //int managerId = resultSet.getInt("managerId");
-                employee = new Employee(qid, name, department, 0);
+                int managerId = 0;
+                if (resultSet.getObject("managerId") != null) {
+                    managerId = resultSet.getInt("managerId");
+                }
+                employee = new Employee(iid, name, department, managerId);
             }
         } catch (SQLException e) {
             System.out.println("基于ID查询操作异常");
+            e.printStackTrace();
         } finally {
             close(resultSet, preparedStatement, connection);
         }
         return employee;
     }
 
+    public static List<Employee> query() {
+        List<Employee> employeeList = new ArrayList<>();
+        try {
+            connection = getConnection("P0570");
+            statement = connection.createStatement();
+            String sql = "select * from employee";
+            resultSet = statement.executeQuery(sql);
+            while (resultSet.next()) {
+                Employee employee;
+                int id = resultSet.getInt("id");
+                String name = resultSet.getString("name");
+                String department = resultSet.getString("department");
+                int managerId = 0;
+                if (resultSet.getObject("managerId") != null) {
+                    managerId = resultSet.getInt("managerId");
+                }
+                employee = new Employee(id, name, department, managerId);
+                employeeList.add(employee);
+            }
+        } catch (SQLException e) {
+            System.out.println("查询操作异常");
+            e.printStackTrace();
+        } finally {
+            close(resultSet, statement, connection);
+        }
+        return employeeList;
+    }
+
     public static void main(String[] args) {
-        Employee employee = query(101);
-        System.out.println(employee);
+        Employee e1 = new Employee(107, "Deean", "B", 102);
+        String ret = insert(e1);
+        System.out.println(ret);
+
+        Employee e2 = query(107);
+        System.out.println(e2);
+
+        ret = delete(107);
+        System.out.println(ret);
+
+        Employee e3 = query(107);
+        System.out.println(e3);
+
+        List<Employee> employeeList = query();
+        for (Employee e : employeeList) {
+            System.out.println(e);
+        }
     }
 }

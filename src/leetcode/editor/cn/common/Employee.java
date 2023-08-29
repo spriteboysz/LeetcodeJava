@@ -15,22 +15,17 @@ public class Employee {
 
     @Override
     public String toString() {
-        return "Employee{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", department='" + department + '\'' +
-                ", managerId=" + managerId +
-                '}';
+        return id + "\t" + name + "\t" + department + "\t" + managerId;
     }
 
     public Employee() {
     }
 
     public Employee(int id, String name, String department, int managerId) {
-        this.id = id;
-        this.name = name;
-        this.department = department;
-        this.managerId = managerId;
+        setId(id);
+        setName(name);
+        setDepartment(department);
+        setManagerId(managerId);
     }
 
     public int getId() {
@@ -63,5 +58,10 @@ public class Employee {
 
     public void setManagerId(int managerId) {
         this.managerId = managerId;
+    }
+
+    public static void main(String[] args) {
+        Employee employee = new Employee();
+        System.out.println(employee);
     }
 }
