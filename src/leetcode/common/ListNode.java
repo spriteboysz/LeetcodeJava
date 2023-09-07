@@ -27,6 +27,20 @@ public class ListNode {
         this.next = next;
     }
 
+    public ListNode(String data) {
+        if (data == null || data.isEmpty()) {
+            return;
+        }
+        String[] list = data.substring(1, data.length() - 1).split(",");
+        int[] values = new int[list.length];
+        for (int i = 0; i < list.length; i++) {
+            values[i] = Integer.parseInt(list[i].trim());
+        }
+        ListNode head = new ListNode(values);
+        this.val = head.val;
+        this.next = head.next;
+    }
+
     public ListNode(int[] values) {
         int n = values.length;
         if (n == 0) new ListNode();
@@ -60,5 +74,7 @@ public class ListNode {
         System.out.println(node);
         ListNode head = new ListNode(new int[]{1, 2, 3});
         System.out.println(head);
+        var head2 = new ListNode("[1,2,3,4,5]");
+        System.out.println(head2 );
     }
 }

@@ -48,7 +48,7 @@ public class TreeNode {
     }
 
     public TreeNode(String data) {
-        if (data == null || "".equals(data)) {
+        if (data == null || data.isEmpty()) {
             return;
         }
         String[] dataList = data.substring(1, data.length() - 1).split(",");
