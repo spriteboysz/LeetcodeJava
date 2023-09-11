@@ -7,7 +7,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import static leetcode.common.MySQL.getConnection;
+
 
 /**
  * Author: Deean
@@ -37,8 +37,8 @@ public class P1757 {
 
     public static void main(String[] args) throws SQLException {
         Solution s = new P1757().new Solution();
-        Connection conn = getConnection("P1757");
-        Object ans = s.find_products(conn);
-        System.out.println(ans.toString());
+        // Connection conn = getConnection("P1757");
+        //Object ans = s.find_products(conn);
+        //System.out.println(ans.toString());
     }
 }
