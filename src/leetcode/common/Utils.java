@@ -1,5 +1,6 @@
 package leetcode.common;
 
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -12,26 +13,51 @@ import java.util.List;
  */
 
 public class Utils {
-    public static int[] toArray(String s) {
-        int n = s.length();
-        s = s.substring(1, n - 1).trim();
+    public static List<Integer> toList(String s) {
         List<Integer> list = new ArrayList<>();
-        System.out.println(s);
-        System.out.println(List.of(Arrays.stream(s.split(",")).toList()));
-        for (String el : s.split(",")) {
-            System.out.println(el);
-            list.add(Integer.parseInt(el));
+        for (String el : s.substring(1, s.length() - 1).split(",")) {
+            list.add(Integer.parseInt(el.trim()));
         }
-        int m = list.size();
-        int[] nums = new int[m];
-        for (int i = 0; i < m; i++) {
+        return list;
+    }
+
+    public static int[] toArray(String s) {
+        List<Integer> list = toList(s);
+        int[] nums = new int[list.size()];
+        for (int i = 0; i < list.size(); i++) {
             nums[i] = list.get(i);
         }
         return nums;
     }
 
+    public static List<List<Integer>> to2DList(String ss) {
+        List<List<Integer>> ll = new ArrayList<>();
+        ss = ss.replaceAll("\\s+", "").replace("],[", "]@[");
+        for (String el : ss.substring(1, ss.length() - 1).split("@")) {
+            ll.add(toList(el.trim()));
+        }
+        return ll;
+    }
+
+    public static int[][] to2DArray(String ss) {
+        List<List<Integer>> ll = to2DList(ss);
+        int m = ll.size(), n = ll.get(0).size();
+        int[][] grid = new int[m][n];
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                grid[i][j] = ll.get(i).get(j);
+            }
+        }
+        return grid;
+    }
+
     public static void main(String[] args) {
         String s = "[1,2,3,4]";
+        System.out.println(toList(s));
         System.out.println(Arrays.toString(toArray(s)));
+
+        String ss = "[[1,2,3],[4,5,6], [7,8, 9]]";
+        System.out.println(to2DList(ss));
+        System.out.println(Arrays.deepToString(to2DArray(ss)));
     }
 }
