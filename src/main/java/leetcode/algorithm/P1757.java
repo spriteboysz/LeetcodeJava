@@ -1,12 +1,13 @@
 package leetcode.algorithm;
 
+import leetcode.common.MyDBUtils;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-
 
 
 /**
@@ -20,7 +21,7 @@ public class P1757 {
     // code beginning
     class Solution {
         public List<Integer> find_products(Connection connection) throws SQLException {
-            PreparedStatement preparedStatement = connection.prepareStatement("select * from products");
+            PreparedStatement preparedStatement = connection.prepareStatement("select * from Products");
             ResultSet resultSet = preparedStatement.executeQuery();
             List<Integer> ids = new ArrayList<>();
             while (resultSet.next()) {
@@ -37,8 +38,8 @@ public class P1757 {
 
     public static void main(String[] args) throws SQLException {
         Solution s = new P1757().new Solution();
-        // Connection conn = getConnection("P1757");
-        //Object ans = s.find_products(conn);
-        //System.out.println(ans.toString());
+        Connection conn = MyDBUtils.getConnection("P1757");
+        Object ans = s.find_products(conn);
+        System.out.println(ans.toString());
     }
 }
