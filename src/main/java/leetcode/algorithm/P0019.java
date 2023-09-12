@@ -18,7 +18,10 @@ public class P0019 {
                 fast = fast.next;
             }
 
-            if (fast == null) return head.next;
+            if (fast == null) {
+                assert head != null;
+                return head.next;
+            }
             while (fast.next != null) {
                 fast = fast.next;
                 slow = slow.next;

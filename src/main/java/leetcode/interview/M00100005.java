@@ -13,10 +13,10 @@ public class M00100005 {
         public int findString(String[] words, String s) {
             int left = 0, right = words.length - 1;
             while (left <= right) {
-                while (left <= right && words[left].equals("")) left++;
-                while (left <= right && words[right].equals("")) right--;
+                while (left <= right && words[left].isEmpty()) left++;
+                while (left <= right && words[right].isEmpty()) right--;
                 int mid = left + (right - left) / 2;
-                while (mid <= right && words[mid].equals("")) mid++;
+                while (mid <= right && words[mid].isEmpty()) mid++;
                 if (words[mid].compareTo(s) > 0) {
                     right = mid - 1;
                 } else if (words[mid].compareTo(s) < 0) {

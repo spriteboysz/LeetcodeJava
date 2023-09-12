@@ -17,7 +17,7 @@ public class P2697 {
                 ss.append((char) Math.min(s.charAt(i), s.charAt(n - 1 - i)));
             }
             String mid = n % 2 == 0 ? "" : String.valueOf(s.charAt(n / 2));
-            return ss.toString() + mid + ss.reverse();
+            return ss + mid + ss.reverse();
         }
     }
 

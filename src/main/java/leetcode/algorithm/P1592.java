@@ -11,7 +11,7 @@ public class P1592 {
     // code beginning
     class Solution {
         public String reorderSpaces(String text) {
-            String[] words = text.trim().split("\s+");
+            String[] words = text.trim().split("\\s+");
             int count = text.length();
             for (String word : words) {
                 count -= word.length();

@@ -21,7 +21,7 @@ public class OII0042 {
 
         public int ping(int t) {
             queue.offer(t);
-            while (queue.size() > 0 && queue.peek() < t - 3000) {
+            while (!queue.isEmpty() && queue.peek() < t - 3000) {
                 queue.poll();
             }
             return queue.size();

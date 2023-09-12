@@ -11,7 +11,7 @@ public class P0557 {
     // code beginning
     class Solution {
         public String reverseWords(String s) {
-            String[] words = s.split("\s+");
+            String[] words = s.split("\\s+");
             for (int i = 0; i < words.length; i++) {
                 StringBuilder sb = new StringBuilder(words[i]);
                 words[i] = sb.reverse().toString();

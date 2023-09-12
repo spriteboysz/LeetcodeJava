@@ -11,7 +11,7 @@ public class P2047 {
     // code beginning
     class Solution {
         public int countValidWords(String sentence) {
-            String[] words = sentence.trim().split("\s+");
+            String[] words = sentence.trim().split("\\s+");
             int count = 0;
             for (String word : words) {
                 if (isValid(word)) count++;

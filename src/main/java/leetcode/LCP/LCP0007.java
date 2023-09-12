@@ -28,6 +28,7 @@ public class LCP0007 {
                 k--;
                 int size = queue.size();
                 for (int i = 0; i < size; i++) {
+                    assert (!queue.isEmpty());
                     int index = queue.poll();
                     Set<Integer> set = edges.get(index);
                     for (int next : set) {

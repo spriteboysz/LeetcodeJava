@@ -35,7 +35,7 @@ public class P0232 {
             if (oStack.isEmpty()) {
                 in2out();
             }
-            return oStack.size() != 0 ? oStack.peek() : -1;
+            return !oStack.isEmpty() ? oStack.peek() : -1;
         }
 
         public boolean empty() {

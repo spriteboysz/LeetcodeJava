@@ -19,7 +19,7 @@ public class P2236 {
 
     public static void main(String[] args) {
         Solution s = new P2236().new Solution();
-        Object ans = s.checkTree(null);
+        Object ans = s.checkTree(new TreeNode("[1,2,3]"));
         System.out.println(ans);
     }
 }

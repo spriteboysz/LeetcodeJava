@@ -16,7 +16,7 @@ public class P1805 {
             String[] words = word.split("[a-z]+");
             HashSet<String> nums = new HashSet<>();
             for (String s : words) {
-                if (s.length() == 0) {
+                if (s.isEmpty()) {
                     continue;
                 }
                 int j = 0;

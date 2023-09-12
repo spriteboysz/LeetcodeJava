@@ -13,7 +13,7 @@ public class O0050 {
     // code beginning
     class Solution {
         public char firstUniqChar(String s) {
-            if (s.length() == 0) return ' ';
+            if (s.isEmpty()) return ' ';
             HashMap<Character, Integer> hashMap = new HashMap<>();
             for (char c : s.toCharArray()) {
                 hashMap.put(c, hashMap.getOrDefault(c, 0) + 1);

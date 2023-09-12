@@ -16,6 +16,7 @@ public class P0313 {
             TreeSet<Long> set = new TreeSet<>();
             set.add(1L);
             for (int i = 1; i <= n; i++) {
+                assert (!set.isEmpty());
                 long x = set.pollFirst();
                 if (i == n) return (int) x;
                 for (int prime : primes) {

@@ -18,6 +18,7 @@ public class P2558 {
                 queue.offer(gift);
             }
             for (int i = 0; i < k; i++) {
+                assert (!queue.isEmpty());
                 int temp = queue.poll();
                 temp = (int) Math.sqrt(temp);
                 queue.offer(temp);

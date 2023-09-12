@@ -27,7 +27,7 @@ public class P0020 {
                     stack.add(c);
                 }
             }
-            return stack.size() == 0;
+            return stack.isEmpty();
         }
     }
 

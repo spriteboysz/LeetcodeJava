@@ -15,7 +15,7 @@ public class P0071 {
         public String simplifyPath(String path) {
             Stack<String> stack = new Stack<>();
             for (String item : path.split("/+")) {
-                if (item.equals("") || item.equals(".")) continue;
+                if (item.isEmpty() || item.equals(".")) continue;
                 if (item.equals("..")) {
                     if (!stack.isEmpty()) stack.pop();
                 } else {

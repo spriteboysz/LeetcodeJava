@@ -47,6 +47,7 @@ public class M00030004 {
             if (oStack.isEmpty()) {
                 transfer();
             }
+            assert (!oStack.isEmpty());
             return oStack.peek();
         }
 

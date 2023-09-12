@@ -27,7 +27,7 @@ public class P0703 {
         public int add(int val) {
             queue.offer(val);
             if (queue.size() > k) queue.poll();
-            return queue.size() == 0 ? -1 : queue.peek();
+            return queue.isEmpty() ? -1 : queue.peek();
         }
     }
 

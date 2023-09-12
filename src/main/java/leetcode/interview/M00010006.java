@@ -11,7 +11,7 @@ public class M00010006 {
     // code beginning
     class Solution {
         public String compressString(String s) {
-            if (s.length() == 0) return s;
+            if (s.isEmpty()) return s;
             StringBuilder builder = new StringBuilder();
             builder.append(s.charAt(0));
             for (int i = 1, count = 1; i < s.length(); i++) {

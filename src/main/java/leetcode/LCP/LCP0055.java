@@ -13,7 +13,7 @@ public class LCP0055 {
         public int getMinimumTime(int[] time, int[][] fruits, int limit) {
             int times = 0;
             for (int[] fruit : fruits) {
-                times += time[fruit[0]] * Math.ceil(fruit[1] * 1.0d / limit);
+                times += (int) (time[fruit[0]] * Math.ceil(fruit[1] * 1.0d / limit));
             }
             return times;
         }

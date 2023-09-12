@@ -25,7 +25,7 @@ public class P1282 {
                 value.add(i);
                 map.put(groupSizes[i], value);
             }
-            // System.out.println(map);
+
             List<List<Integer>> group = new ArrayList<>();
             for (Map.Entry<Integer, List<Integer>> entry : map.entrySet()) {
                 List<Integer> list = entry.getValue();
