@@ -13,7 +13,7 @@ import java.util.List;
 public class P2614 {
     // code beginning
     class Solution {
-        public List<Integer> prime = new ArrayList<>();
+        public final List<Integer> prime = new ArrayList<>();
 
         private boolean check(int num) {
             if (prime.contains(num)) {
