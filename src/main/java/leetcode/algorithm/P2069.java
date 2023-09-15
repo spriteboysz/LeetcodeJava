@@ -9,7 +9,7 @@ import java.util.Arrays;
  * Description: 2069. 模拟行走机器人 II
  */
 
-public class P2069 {
+public class P2069 {    // TODO: 待补充
     // code beginning
     class Robot {
 
