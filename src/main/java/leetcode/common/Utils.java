@@ -51,6 +51,19 @@ public class Utils {
         return grid;
     }
 
+    public static List<String> toSList(String s) {
+        return new ArrayList<>(Arrays.asList(s.substring(1, s.length() - 1).split(",")));
+    }
+
+    public static String[] toSArray(String s) {
+        List<String> list = toSList(s);
+        String[] strs = new String[list.size()];
+        for (int i = 0; i < list.size(); i++) {
+            strs[i] = list.get(i);
+        }
+        return strs;
+    }
+
     public static void main(String[] args) {
         String s = "[1,2,3,4]";
         System.out.println(toList(s));
@@ -59,5 +72,8 @@ public class Utils {
         String ss = "[[1,2,3],[4,5,6], [7,8, 9]]";
         System.out.println(to2DList(ss));
         System.out.println(Arrays.deepToString(to2DArray(ss)));
+        String words = "[\"this\",\"is\",\"only\",\"test\"]";
+        System.out.println(toSList(words));
+        System.out.println(Arrays.toString(toSArray(words)));
     }
 }
