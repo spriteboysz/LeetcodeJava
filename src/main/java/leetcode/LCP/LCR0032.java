@@ -1,4 +1,4 @@
-package leetcode.algorithm;
+package leetcode.LCP;
 
 /**
  * Author: Deean

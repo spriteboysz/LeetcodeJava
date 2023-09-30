@@ -1,4 +1,4 @@
-package leetcode.algorithm;
+package leetcode.LCP;
 
 import java.util.ArrayList;
 import java.util.Collections;

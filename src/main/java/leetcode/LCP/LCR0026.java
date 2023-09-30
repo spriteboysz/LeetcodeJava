@@ -1,4 +1,4 @@
-package leetcode.algorithm;
+package leetcode.LCP;
 
 import leetcode.common.ListNode;
 

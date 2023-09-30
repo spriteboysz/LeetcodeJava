@@ -1,4 +1,4 @@
-package leetcode.algorithm;
+package leetcode.LCP;
 
 import java.util.Deque;
 import java.util.LinkedList;
