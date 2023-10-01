@@ -52,19 +52,19 @@ public class TreeNode {
             return;
         }
         String[] dataList = data.substring(1, data.length() - 1).split(",");
-        TreeNode root = new TreeNode(Integer.parseInt(dataList[0]));
+        TreeNode root = new TreeNode(Integer.parseInt(dataList[0].trim()));
         Queue<TreeNode> queue = new LinkedList<>();
         queue.offer(root);
         int i = 1;
         while (!queue.isEmpty()) {
             TreeNode node = queue.poll();
-            if (i < dataList.length && !"null".equals(dataList[i])) {
-                node.left = new TreeNode(Integer.parseInt(dataList[i]));
+            if (i < dataList.length && !"null".equals(dataList[i].trim())) {
+                node.left = new TreeNode(Integer.parseInt(dataList[i].trim()));
                 queue.offer(node.left);
             }
             i++;
-            if (i < dataList.length && !"null".equals(dataList[i])) {
-                node.right = new TreeNode(Integer.parseInt(dataList[i]));
+            if (i < dataList.length && !"null".equals(dataList[i].trim())) {
+                node.right = new TreeNode(Integer.parseInt(dataList[i].trim()));
                 queue.offer(node.right);
             }
             i++;
