@@ -10,7 +10,7 @@ package leetcode.algorithm;
 public class P2409 {
     // code beginning
     class Solution {
-        private static final int[] MONTH = new int[]{31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+        private final int[] MONTH = new int[]{31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 
         public int countDaysTogether(String arriveAlice, String leaveAlice, String arriveBob, String leaveBob) {
             int arrive = Math.max(process(arriveAlice), process(arriveBob));

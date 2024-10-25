@@ -22,7 +22,7 @@ public class LCR0033 {
                 value.add(str);
                 hash.put(key, value);
             }
-            return hash.values().stream().toList();
+            return null;
         }
     }
 

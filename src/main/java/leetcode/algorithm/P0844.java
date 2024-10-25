@@ -13,14 +13,14 @@ public class P0844 {
         public boolean backspaceCompare(String s, String t) {
             StringBuilder sBuilder = new StringBuilder(), tBuilder = new StringBuilder();
             for (char c : s.toCharArray()) {
-                if (c == '#' && !sBuilder.isEmpty()) {
+                if (c == '#' && sBuilder.length() != 0) {
                     sBuilder.deleteCharAt(sBuilder.length() - 1);
                 } else if (c != '#') {
                     sBuilder.append(c);
                 }
             }
             for (char c : t.toCharArray()) {
-                if (c == '#' && !tBuilder.isEmpty()) {
+                if (c == '#' && tBuilder.length() != 0) {
                     tBuilder.deleteCharAt(tBuilder.length() - 1);
                 } else if (c != '#') {
                     tBuilder.append(c);

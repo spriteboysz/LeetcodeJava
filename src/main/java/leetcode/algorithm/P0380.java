@@ -14,7 +14,7 @@ import java.util.Random;
 public class P0380 {
     // code beginning
     class RandomizedSet {
-        static int[] nums;
+        int[] nums;
         Map<Integer, Integer> map;
         Random random = new Random();
         int index;

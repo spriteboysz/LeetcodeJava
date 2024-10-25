@@ -13,7 +13,7 @@ public class P2390 {
         public String removeStars(String s) {
             StringBuilder ss = new StringBuilder();
             for (char c : s.toCharArray()) {
-                if (ss.isEmpty()) {
+                if (ss.length() == 0) {
                     if (c != '*') {
                         ss.append(c);
                     }

@@ -14,7 +14,7 @@ public class P2696 {
             StringBuilder ss = new StringBuilder();
             for (char c : s.toCharArray()) {
                 int last = ss.length() - 1;
-                if (ss.isEmpty()) {
+                if (ss.length() == 0) {
                     ss.append(c);
                 } else if (ss.charAt(last) == 'A' && c == 'B') {
                     ss.deleteCharAt(last);

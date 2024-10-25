@@ -13,7 +13,7 @@ public class P3174 {
         public String clearDigits(String s) {
             StringBuilder ss = new StringBuilder();
             for (int i = 0; i < s.length(); i++) {
-                if (s.charAt(i) >= '0' && s.charAt(i) <= '9' && !ss.isEmpty()) {
+                if (s.charAt(i) >= '0' && s.charAt(i) <= '9' && ss.length() != 0) {
                     ss.deleteCharAt(ss.length() - 1);
                 } else {
                     ss.append(s.charAt(i));

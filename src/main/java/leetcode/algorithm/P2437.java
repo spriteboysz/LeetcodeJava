@@ -14,7 +14,8 @@ public class P2437 {
             int cnt = 0;
             for (int i = 0; i < 24 * 60; i++) {
                 int hh = i / 60, mm = i % 60;
-                String cur = "%02d:%02d".formatted(hh, mm);
+                // String cur = "%02d:%02d".formatted(hh, mm);
+                String cur = String.format("%02d:%02d", hh, mm);
                 boolean flag = true;
                 for (int j = 0; j < 5; j++) {
                     if (time.charAt(j) != '?' && cur.charAt(j) != time.charAt(j)) {
